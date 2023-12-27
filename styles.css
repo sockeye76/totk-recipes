@@ -1,0 +1,53 @@
+@font-face {
+    font-family: zelda-font;
+    src: url(./fonts/zelda-font.ttf);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #006c3b;
+    font-family: zelda-font, Luminari, fantasy;
+}
+
+.header {
+    padding: 16px;
+    height: 2em;
+    color: #fbf5dc;
+    background: #47d49a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.header li {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header a {
+    height: 100%;
+    text-decoration: none;
+    color: #fbf5dc;
+}
+
+.header img {
+    max-height: 100%;
+    max-width: 100%;
+}
