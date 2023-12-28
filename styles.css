@@ -11,7 +11,6 @@ body {
     background-position: center;
     background-size: cover;
     text-transform: uppercase;
-
     font-family: zelda-font, Luminari, fantasy;
 }
 
@@ -108,4 +107,15 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.footer {
+    text-align: center;
+    color: #fbf5dc;
+    font-size: 1.2em;
+}
+
+.footer a {
+    color: #fbf5dc;
+    text-decoration: none;
 }
