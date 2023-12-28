@@ -10,6 +10,9 @@ body {
     background-image: url(./images/backgrounds/main.png);
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     text-transform: uppercase;
     font-family: zelda-font, Luminari, fantasy;
 }
@@ -113,6 +116,11 @@ body {
     text-align: center;
     color: #fbf5dc;
     font-size: 1.2em;
+}
+
+.footer p {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .footer a {

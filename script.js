@@ -3,113 +3,173 @@ const recipes = [
         id: "1",
         name: "Mushroom Skewer",
         ingredients: ["Any Mushroom"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "2",
         name: "Meat and Mushroom Skewer",
         ingredients: ["Any Mushroom", "Any Meat"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "3",
         name: "Fish and Mushroom Skewer",
         ingredients: ["Any Mushroom", "Any Fish"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "4",
         name: "Meat Skewer",
         ingredients: ["Any Meat"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "5",
         name: "Fish Skewer",
         ingredients: ["Any Fish"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "6",
         name: "Seafood Skewer",
         ingredients: ["Any Snail or Crab"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "7",
         name: "Copious Meat Skewers",
         ingredients: ["Any Four Different Meat"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "8",
         name: "Copious Seafood Skewers",
         ingredients: ["Any Four Different Fish"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "9",
         name: "Steamed Fruit",
         ingredients: ["Any Fruit", "Any Vegetable"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "10",
         name: "Steamed Tomatoes",
         ingredients: ["Hylian Tomato", "Any Vegetable"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "11",
         name: "Steamed Mushrooms",
         ingredients: ["Any Mushroom", "Any Vegetable"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "12",
         name: "Steamed Meat",
         ingredients: ["Any Meat", "Any Vegetable"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "13",
         name: "Steamed Fish",
         ingredients: ["Any Fish", "Any Vegetable"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "14",
         name: "Sauteed Peppers",
         ingredients: ["Spicy Pepper"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     },
     {
         id: "15",
         name: "Sauteed Nuts",
         ingredients: ["Any Nut"],
-        effect: "Effect Not Available",
-        method: "Cooked In Pot"
+        effects: ["Effect Not Available"],
+        notes: ["Cooked In Pot"]
     }
 ]
 
-function populateRecipes () {
-    
+function createNewHTML(HTML) {
+    const template = document.createElement("template");
+    template.innerHTML = HTML.trim();
+    return template.content.firstElementChild;
+}
+
+function outputEach(iteration, operation) {
+    let i = 0;
+    let data = ``;
+
+    switch(operation) {
+        case 'ingredients':
+            while (i < recipes[iteration].ingredients.length) {
+                data += `<li>${recipes[iteration].ingredients[i]}</li>`;
+                i++
+            }
+            break;
+        case 'effects':
+            while (i < recipes[iteration].effects.length) {
+                data += `<li>${recipes[iteration].effects[i]}</li>`;
+                i++
+            }
+            break;
+        case 'notes':
+            while (i < recipes[iteration].notes.length) {
+                data += `<li>${recipes[iteration].notes[i]}</li>`;
+                i++
+            }
+            break;
+        default:
+            break;
+    }
+
+    return data;
+}
+
+function populateRecipes() {
+    let i = 0;
+
+    while (i < recipes.length) {
+        let newDish = createNewHTML(`
+            <div class="dish">
+                <p>${recipes[i].id}</p>
+                <div class="image-container">
+                    <img src="./images/recipes/${recipes[i].id}.png">
+                </div>
+                <p>${recipes[i].name}</p>
+                <ul>
+                    ${outputEach(i, 'ingredients')}
+                </ul>
+                <ul>
+                    ${outputEach(i, 'effects')}
+                </ul>
+                <ul>
+                    ${outputEach(i, 'notes')}
+                </ul>
+            </div>
+        `);
+
+        document.getElementById("recipes").appendChild(newDish);
+        i++;
+    }
 }
 
 function recipeSearch() {
-    
+    document.getElementById("queryTitle").innerHTML("Search Results")
 }
