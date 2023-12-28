@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>ToTK Cookbook</title>
 </head>
-<body>
+<body onload="recipeSearch()">
     <div class="header">
         <ul>
-            <li>SECTIONS:</li>
-            <li><a href="#">POT</a></li>
-            <li><a href="#">HEAT</a></li>
-            <li><a href="#">SPRING</a></li>
-            <li><a href="#">COLD</a></li>
-            <li><a href="#">ELIXIRS</a></li>
+            <li>SEARCH:</li>
+            <li><input type="text"></li>
         </ul>
         <a href="https://github.com/fish-boy76/totk-recipes" target="_blank">
             <img src="./images/header/github-logo.svg">
@@ -22,163 +19,178 @@
     </div>
 
     <div class="recipes">
-        <h1>--- POT ---</h1>
+        <h1 id="queryTitle">All Recipes</h1>
 
         <div class="dish">
             <p class="id">1</p>
             <div class="image-container"><img class="image" src="./images/recipes/1.png"></div>
-            <p class="title">MUSHROOM SKEWER</p>
+            <p class="title">Mushroom Skewer</p>
             <ul class="ingredients">
-                <li>ANY MUSHROOM</li>
+                <li>Any Mushroom</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">2</p>
             <div class="image-container"><img class="image" src="./images/recipes/2.png"></div>
-            <p class="title">MEAT AND MUSHROOM SKEWER</p>
+            <p class="title">Meat and Mushroom Skewer</p>
             <ul class="ingredients">
-                <li>ANY MUSHROOM +</li>
-                <li>ANY MEAT</li>
+                <li>Any Mushroom +</li>
+                <li>Any Meat</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">3</p>
             <div class="image-container"><img class="image" src="./images/recipes/3.png"></div>
-            <p class="title">FISH AND MUSHROOM SKEWER</p>
+            <p class="title">Fish and Mushroom Skewer</p>
             <ul class="ingredients">
-                <li>ANY MUSHROOM +</li>
-                <li>ANY FISH</li>
+                <li>Any Mushroom +</li>
+                <li>Any Fish</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">4</p>
             <div class="image-container"><img class="image" src="./images/recipes/4.png"></div>
-            <p class="title">MEAT SKEWER</p>
+            <p class="title">Meat Skewer</p>
             <ul class="ingredients">
-                <li>ANY MEAT</li>
+                <li>Any Meat</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">5</p>
             <div class="image-container"><img class="image" src="./images/recipes/5.png"></div>
-            <p class="title">FISH SKEWER</p>
+            <p class="title">Fish Skewer</p>
             <ul class="ingredients">
-                <li>ANY FISH</li>
+                <li>Any Fish</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">6</p>
             <div class="image-container"><img class="image" src="./images/recipes/6.png"></div>
-            <p class="title">SEAFOOD SKEWER</p>
+            <p class="title">Seafood Skewer</p>
             <ul class="ingredients">
-                <li>ANY SNAIL OR CRAB</li>
+                <li>Any Snail or Crab</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">7</p>
             <div class="image-container"><img class="image" src="./images/recipes/7.png"></div>
-            <p class="title">COPIOUS MEAT SKEWERS</p>
+            <p class="title">Copious Meat Skewers</p>
             <ul class="ingredients">
-                <li>ANY FOUR DIFFERENT MEAT</li>
+                <li>Any Four Different Meat</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">8</p>
             <div class="image-container"><img class="image" src="./images/recipes/8.png"></div>
-            <p class="title">COPIOUS SEAFOOD SKEWERS</p>
+            <p class="title">Copious Seafood Skewers</p>
             <ul class="ingredients">
-                <li>ANY FOUR DIFFERENT FISH</li>
+                <li>Any Four Different Fish</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">9</p>
             <div class="image-container"><img class="image" src="./images/recipes/9.png"></div>
-            <p class="title">STEAMED FRUIT</p>
+            <p class="title">Steamed Fruit</p>
             <ul class="ingredients">
-                <li>ANY FRUIT +</li>
-                <li>ANY VEGETABLE</li>
+                <li>Any Fruit +</li>
+                <li>Any Vegetable</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">10</p>
             <div class="image-container"><img class="image" src="./images/recipes/10.png"></div>
-            <p class="title">STEAMED TOMATOES</p>
+            <p class="title">Steamed Tomatoes</p>
             <ul class="ingredients">
-                <li>HYLIAN TOMATO +</li>
-                <li>ANY VEGETABLE</li>
+                <li>Hylian Tomato +</li>
+                <li>Any Vegetable</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">11</p>
             <div class="image-container"><img class="image" src="./images/recipes/11.png"></div>
-            <p class="title">STEAMED MUSHROOMS</p>
+            <p class="title">Steamed Mushrooms</p>
             <ul class="ingredients">
-                <li>ANY MUSHROOM +</li>
-                <li>ANY VEGETABLE</li>
+                <li>Any Mushroom +</li>
+                <li>Any Vegetable</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">12</p>
             <div class="image-container"><img class="image" src="./images/recipes/12.png"></div>
-            <p class="title">STEAMED MEAT</p>
+            <p class="title">Steamed Meat</p>
             <ul class="ingredients">
-                <li>ANY MEAT +</li>
-                <li>ANY VEGETABLE</li>
+                <li>Any Meat +</li>
+                <li>Any Vegetable</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">13</p>
             <div class="image-container"><img class="image" src="./images/recipes/13.png"></div>
-            <p class="title">STEAMED FISH</p>
+            <p class="title">Steamed Fish</p>
             <ul class="ingredients">
-                <li>ANY FISH +</li>
-                <li>ANY VEGETABLE</li>
+                <li>Any Fish +</li>
+                <li>Any Vegetable</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">14</p>
             <div class="image-container"><img class="image" src="./images/recipes/14.png"></div>
-            <p class="title">SAUTEED PEPPERS</p>
+            <p class="title">Sauteed Peppers</p>
             <ul class="ingredients">
-                <li>SPICY PEPPER</li>
+                <li>Spicy Pepper</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
 
         <div class="dish">
             <p class="id">15</p>
             <div class="image-container"><img class="image" src="./images/recipes/15.png"></div>
-            <p class="title">SAUTEED NUTS</p>
+            <p class="title">Sauteed Nuts</p>
             <ul class="ingredients">
-                <li>ANY NUT</li>
+                <li>Any Nut</li>
             </ul>
-            <p class="effect">EFFECT NOT AVAILABLE</p>
+            <p class="effect">Effect Not Available</p>
+            <p>Cooked In Pot</p>
         </div>
     </div>
 

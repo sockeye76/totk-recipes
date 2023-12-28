@@ -7,6 +7,11 @@ body {
     margin: 0;
     height: 100vh;
     background: #006c3b;
+    background-image: url(./images/backgrounds/main.png);
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+
     font-family: zelda-font, Luminari, fantasy;
 }
 
@@ -14,7 +19,7 @@ body {
     padding: 16px;
     height: 2em;
     color: #fbf5dc;
-    background: #47d49a;
+    background: #47d49a00;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
 }
 
 .header li {
@@ -35,6 +40,21 @@ body {
     padding: 0;
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.header input {
+    margin: 0;
+    padding: 0;
+    border: 0px solid #fbf5dc;
+    border-bottom-width: 1px;
+    color: #fbf5dc;
+    font-family: zelda-font, Luminari, fantasy;
+    font-size: 1.1em;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase;
+    width: 120%;
+    background: #47d49a00;
 }
 
 .header a {
@@ -49,11 +69,11 @@ body {
 }
 
 .recipes {
-    padding: 24px;
+    padding: 48px 96px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
 }
 
 .recipes h1 {
@@ -69,9 +89,9 @@ body {
     padding: 10px;
     border-style: solid;
     border-radius: 32px;
-    border-color: #6b5e24;
-    background: #bbae7e;
-    color: #4f4305;
+    border-color: #6b5e24d3;
+    background: #bbae7ed3;
+    color: #4f4305d3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
