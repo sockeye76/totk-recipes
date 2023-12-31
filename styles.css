@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
 }
 
 .header li {
@@ -42,21 +42,6 @@ body {
     padding: 0;
     font-size: 1.5em;
     font-weight: bold;
-}
-
-.header input {
-    margin: 0;
-    padding: 0;
-    border: 0px solid #fbf5dc;
-    border-bottom-width: 1px;
-    color: #fbf5dc;
-    font-family: zelda-font, Luminari, fantasy;
-    font-size: 1.1em;
-    font-weight: bold;
-    outline: none;
-    text-transform: uppercase;
-    width: 120%;
-    background: #47d49a00;
 }
 
 .header a {
@@ -98,7 +83,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.35em;
 }
 
 .cookbook-entry * {
