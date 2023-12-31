@@ -86,6 +86,17 @@ body {
     font-size: 1.35em;
 }
 
+.cookbook-entry * {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.cookbook-entry ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .heat {
     border-color: #8c2f2fd3;
     background: #d68585d3;
@@ -108,17 +119,6 @@ body {
     border-color: #672f8cd3;
     background: #b785d6d3;
     color: #492163d3;
-}
-
-.cookbook-entry * {
-    flex: 1 1 0;
-    text-align: center;
-}
-
-.cookbook-entry ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 .footer {

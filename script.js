@@ -132,18 +132,21 @@ function generateList(recipeNum, operation) {
                 i++
             }
             break;
+
         case 'effects':
             while (i < recipes[recipeNum].effects.length) {
                 data += `<li>${recipes[recipeNum].effects[i]}</li>`;
                 i++
             }
             break;
+
         case 'notes':
             while (i < recipes[recipeNum].notes.length) {
                 data += `<li>${recipes[recipeNum].notes[i]}</li>`;
                 i++
             }
             break;
+            
         default:
             break;
     }
