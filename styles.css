@@ -86,7 +86,7 @@ body {
     font-size: 2.5em;
 }
 
-.dish {
+.cookbook-entry {
     border: 6px;
     padding: 10px;
     border-style: solid;
@@ -101,12 +101,12 @@ body {
     font-size: 1.5em;
 }
 
-.dish * {
+.cookbook-entry * {
     flex: 1 1 0;
     text-align: center;
 }
 
-.dish ul {
+.cookbook-entry ul {
     margin: 0;
     padding: 0;
     list-style: none;

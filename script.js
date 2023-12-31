@@ -112,26 +112,30 @@ function createNewHTML(HTML) {
     return template.content.firstElementChild;
 }
 
-function outputEach(iteration, operation) {
+function outputEach(recipeID, operation) {
     let i = 0;
     let data = ``;
 
     switch(operation) {
         case 'ingredients':
-            while (i < recipes[iteration].ingredients.length) {
-                data += `<li>${recipes[iteration].ingredients[i]}</li>`;
+            while (i < recipes[recipeID].ingredients.length) {
+                if (i + 1 === recipes[recipeID].ingredients.length)
+                    data += `<li>${recipes[recipeID].ingredients[i]}</li>`;
+                else {
+                    data += `<li>${recipes[recipeID].ingredients[i]} +</li>`;
+                }
                 i++
             }
             break;
         case 'effects':
-            while (i < recipes[iteration].effects.length) {
-                data += `<li>${recipes[iteration].effects[i]}</li>`;
+            while (i < recipes[recipeID].effects.length) {
+                data += `<li>${recipes[recipeID].effects[i]}</li>`;
                 i++
             }
             break;
         case 'notes':
-            while (i < recipes[iteration].notes.length) {
-                data += `<li>${recipes[iteration].notes[i]}</li>`;
+            while (i < recipes[recipeID].notes.length) {
+                data += `<li>${recipes[recipeID].notes[i]}</li>`;
                 i++
             }
             break;
@@ -142,34 +146,38 @@ function outputEach(iteration, operation) {
     return data;
 }
 
+function addRecipe(recipe) {
+    let newRecipe = createNewHTML(`
+        <div class="cookbook-entry">
+            <p>${recipes[recipe].id}</p>
+            <div class="image-container">
+                <img src="./images/recipes/${recipes[recipe].id}.png">
+            </div>
+            <p>${recipes[recipe].name}</p>
+            <ul>
+                ${outputEach(recipe, 'ingredients')}
+            </ul>
+            <ul>
+                ${outputEach(recipe, 'effects')}
+            </ul>
+            <ul>
+                ${outputEach(recipe, 'notes')}
+            </ul>
+        </div>
+    `);
+
+    document.getElementById("recipes").appendChild(newRecipe);
+}
+
 function populateRecipes() {
     let i = 0;
 
     while (i < recipes.length) {
-        let newDish = createNewHTML(`
-            <div class="dish">
-                <p>${recipes[i].id}</p>
-                <div class="image-container">
-                    <img src="./images/recipes/${recipes[i].id}.png">
-                </div>
-                <p>${recipes[i].name}</p>
-                <ul>
-                    ${outputEach(i, 'ingredients')}
-                </ul>
-                <ul>
-                    ${outputEach(i, 'effects')}
-                </ul>
-                <ul>
-                    ${outputEach(i, 'notes')}
-                </ul>
-            </div>
-        `);
-
-        document.getElementById("recipes").appendChild(newDish);
+        addRecipe(i);
         i++;
     }
 }
 
 function recipeSearch() {
-    document.getElementById("queryTitle").innerHTML("Search Results")
+    document.getElementById("queryTitle").innerHTML = "Search Results";
 }
