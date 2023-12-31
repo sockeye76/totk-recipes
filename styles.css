@@ -86,6 +86,30 @@ body {
     font-size: 1.35em;
 }
 
+.heat {
+    border-color: #8c2f2fd3;
+    background: #d68585d3;
+    color: #632121d3;
+}
+
+.spring {
+    border-color: #2f678cd3;
+    background: #85b7d6d3;
+    color: #214963d3;
+}
+
+.cold {
+    border-color: #2f858cd3;
+    background: #85d1d6d3;
+    color: #215e63d3;
+}
+
+.elixir {
+    border-color: #672f8cd3;
+    background: #b785d6d3;
+    color: #492163d3;
+}
+
 .cookbook-entry * {
     flex: 1 1 0;
     text-align: center;

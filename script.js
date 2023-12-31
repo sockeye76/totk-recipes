@@ -156,20 +156,40 @@ function addRecipe(recipeNum) {
 
     switch(recipes[recipeNum].id) {
         case '1':
-            newRecipe += `<div class="cookbook-entry" id="pot">`;
+            newRecipe += `<div class="cookbook-entry" id="potSection">`;
             break;
-        case '147':
-            newRecipe += `<div class="cookbook-entry" id="heat">`;
+
+        case (recipes[recipeNum].id >= 147 && recipes[recipeNum].id < 198):
+            if (recipes[recipeNum].id === 147) {
+                newRecipe += `<div class="cookbook-entry heat" id="heatSection">`;
+            }
+            else {
+                newRecipe += `<div class="cookbook-entry heat">`;
+            }
             break;
+
         case '198':
-            newRecipe += `<div class="cookbook-entry" id="spring">`;
+            newRecipe += `<div class="cookbook-entry spring" id="springSection">`;
             break;
-        case '199':
-            newRecipe += `<div class="cookbook-entry" id="cold">`;
+
+        case (recipes[recipeNum].id >= 199 && recipes[recipeNum].id < 215):
+            if (recipes[recipeNum].id === 199) {
+                newRecipe += `<div class="cookbook-entry cold" id="coldSection">`;
+            }
+            else {
+                newRecipe += `<div class="cookbook-entry cold">`;
+            }
             break;
-        case '215':
-            newRecipe += `<div class="cookbook-entry" id="elixir">`;
+
+        case (recipes[recipeNum].id >= 215):
+            if (recipes[recipeNum].id === 215) {
+                newRecipe += `<div class="cookbook-entry elixir" id="elixirSection">`;
+            }
+            else {
+                newRecipe += `<div class="cookbook-entry elixir">`;
+            }
             break;
+
         default:
             newRecipe += `<div class="cookbook-entry">`;
             break;
