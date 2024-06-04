@@ -41,7 +41,6 @@ body {
     margin: 0;
     padding: 0;
     font-size: 1.5em;
-    font-weight: bold;
 }
 
 .header a {
@@ -69,6 +68,7 @@ body {
     color: #fbf5dc;
     text-align: center;
     font-size: 2.5em;
+    font-weight: normal;
 }
 
 .cookbook-entry {
@@ -119,6 +119,58 @@ body {
     border-color: #672f8cd3;
     background: #b785d6d3;
     color: #492163d3;
+}
+
+.health {
+    color: #ff6635d3;
+}
+
+.energizing {
+    color: #00f15ad3;
+}
+
+.hearty {
+    color: #ffff00de;
+}
+
+.enduring {
+    color: #ffff00d3;
+}
+
+.sunny {
+    color: #ffff00d3;
+}
+
+.gloom-resistance {
+    color: #00cfbed3;
+}
+
+.heat-resistance {
+    color: #ff9800d3;
+}
+
+.cold-resistance {
+    color: #91f7ffd3;
+}
+
+.shock-resistance {
+    color: #efef00d3;
+}
+
+.flame-guard {
+    color: #ff3d3dd3;
+}
+
+.attack-up {
+    color: #fffde3d3;
+}
+
+.defense-up {
+    color: #fffde3d3;
+}
+
+.speed-up {
+    color: #0089ffd3
 }
 
 .footer {

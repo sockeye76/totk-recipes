@@ -1382,9 +1382,9 @@ const recipes = [
     },
     {
         id: "198",
-        name: "Name Not Available",
-        ingredients: ["Recipe Not Available"],
-        effects: ["Effect Not Available"],
+        name: "Hard-Boiled Egg",
+        ingredients: ["Bird Egg"],
+        effects: ["Health Recovery"],
         notes: ["Cooked In Hot Spring"]
     },
     {
